@@ -1,0 +1,16 @@
+version: '2'
+services:
+  nginx-static-web:
+    build: ./nginx-static-web
+    image: tiger/nginx-static-web
+    container_name: www
+    networks:
+      local:
+        aliases:
+          - www.tigerslair.com
+    ports:
+      - 80:80
+
+networks:
+  local:
+    driver: bridge

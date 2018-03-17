@@ -24,5 +24,5 @@ sudo apt install -y \
     docker-ce \
     docker-compose
 
-# docker user permission
+# docker user permission (logging out and logging back required)
 sudo usermod -aG docker ${USER} 
