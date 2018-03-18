@@ -1,26 +1,25 @@
 version: '2'
 services:
+  nginx-reverse-proxy:
+    build: ./nginx-reverse-proxy
+    image: tiger/reverse-proxy
+    container_name: reverse-proxy
+    environment:
+      - DOMAIN_NAME=www.tigermain.com,second.tigermain.com
+    networks:
+      local:
   nginx-static-web:
     build: ./nginx-static-web
     image: tiger/nginx-static-web
     container_name: www
-    environment:
-      - DOMAIN_NAME=www.tigerslair.com
     networks:
       local:
-        aliases:
-          - www.tigerslair.com
-
   nginx-static-web-2:
     build: ./nginx-static-web-2
     image: tiger/nginx-static-web-2
     container_name: www-2
-    environment:
-      - DOMAIN_NAME=www.tigerslair-2.com
     networks:
       local:
-        aliases:
-          - www.tigerslair-2.com
 
 networks:
   local:
