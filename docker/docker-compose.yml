@@ -5,7 +5,7 @@ services:
     image: tiger/reverse-proxy
     container_name: reverse-proxy
     environment:
-      - DOMAIN_NAME=www.tigermain.com,second.tigermain.com
+      - DOMAIN_NAME=www.tigers-lair.com,second.tigers-lair.com
     networks:
       local:
   nginx-static-web:
