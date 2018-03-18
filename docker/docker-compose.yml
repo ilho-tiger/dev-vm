@@ -10,8 +10,6 @@ services:
       local:
         aliases:
           - www.tigerslair.com
-    ports:
-      - 80:80
 
 networks:
   local:
