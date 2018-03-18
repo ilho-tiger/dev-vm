@@ -1,0 +1,9 @@
+version: '2'
+services:
+  dns:
+    build: ./
+    image: tiger/dns
+    container_name: ns
+    ports:
+      - 53:53/udp
+
