@@ -11,6 +11,17 @@ services:
         aliases:
           - www.tigerslair.com
 
+  nginx-static-web-2:
+    build: ./nginx-static-web-2
+    image: tiger/nginx-static-web-2
+    container_name: www-2
+    environment:
+      - DOMAIN_NAME=www.tigerslair-2.com
+    networks:
+      local:
+        aliases:
+          - www.tigerslair-2.com
+
 networks:
   local:
     driver: bridge
