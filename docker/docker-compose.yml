@@ -4,6 +4,8 @@ services:
     build: ./nginx-static-web
     image: tiger/nginx-static-web
     container_name: www
+    environment:
+      - DOMAIN_NAME=www.tigerslair.com
     networks:
       local:
         aliases:
